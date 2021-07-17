@@ -60,10 +60,36 @@ const App = () => {
     event.preventDefault();
     
     // new Pizza
+    const newPizza = {
+      name:            pizza.name.trim(),
+      size:            pizza.size,
+      pepperoni:       pizza.pepperoni,
+      sausage:         pizza.sausage,
+      can_bacon:       pizza.can_bacon,
+      si_sausage:      pizza.si_sausage,
+      grilled_chicken: pizza.grilled_chicken,
+      onions:          pizza.onions,
+      green_pepper:    pizza.green_pepper,
+      diced_tomatos:   pizza.diced_tomatos,
+      black_olives:    pizza.black_olives,
+      roasted_garlic:  pizza.roasted_garlic,
+      three_cheese:    pizza.three_cheese,
+      pineapple:       pizza.pineapple,
+      special:         pizza.special.trim()
+    }
 
     // axios POST Requst
+    axios.post('https://reqres.in/api/orders', newPizza)
+      .then(res => {
+        console.log(res);
+        return res.data;
+      })
+      .catch(err => {
+        console.log(err);
+      })
 
-    // Reset form here
+      // Reset form here
+      setPizza(defaultPizza);
   }
 
   const handleChange = event => {

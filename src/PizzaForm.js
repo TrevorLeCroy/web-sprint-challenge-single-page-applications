@@ -32,77 +32,84 @@ const PizzaForm = props => {
                     <label> Pepperoni </label>
                     <input name='pepperoni'
                         type='checkbox'
-                        value={props.form.pepperoni}
+                        checked={props.form.pepperoni}
                         onChange={props.handleChange}> 
                     </input>
 
                     <label> Sausage </label>
                     <input name='sausage'
                         type='checkbox'
-                        value={props.form.sausage}
+                        checked={props.form.sausage}
                         onChange={props.handleChange}> 
                     </input>
 
                     <label> Canadian Bacon </label>
                     <input name='can_bacon'
                         type='checkbox'
-                        value={props.form.can_bacon}
+                        checked={props.form.can_bacon}
                         onChange={props.handleChange}> 
                     </input>
 
                     <label> Spicy Italian Sausage </label>
                     <input name='si_sausage'
                         type='checkbox'
-                        value={props.form.si_sausage}
+                        checked={props.form.si_sausage}
                         onChange={props.handleChange}> 
                     </input>
 
                     <label> Grilled Chicken </label>
                     <input name='grilled_chicken'
                         type='checkbox'
-                        value={props.form.grilled_chicken}
+                        checked={props.form.grilled_chicken}
                         onChange={props.handleChange}> 
                     </input>
 
                     <label> Onions </label>
                     <input name='onions'
                         type='checkbox'
-                        value={props.form.onions}
+                        checked={props.form.onions}
                         onChange={props.handleChange}> 
                     </input>
 
                     <label> Green Pepper </label>
                     <input name='green_pepper'
                         type='checkbox'
-                        value={props.form.green_pepper}
+                        checked={props.form.green_pepper}
                         onChange={props.handleChange}> 
                     </input>
 
                     <label> Diced Tomatos </label>
                     <input name='diced_tomatos'
                         type='checkbox'
-                        value={props.form.diced_tomatos}
+                        checked={props.form.diced_tomatos}
                         onChange={props.handleChange}> 
                     </input>
 
                     <label> Black Olives </label>
                     <input name='black_olives'
                         type='checkbox'
-                        value={props.form.black_olives}
+                        checked={props.form.black_olives}
                         onChange={props.handleChange}> 
                     </input>
 
                     <label> Roasted Garlic </label>
                     <input name='roasted_garlic'
                         type='checkbox'
-                        value={props.form.roasted_garlic}
+                        checked={props.form.roasted_garlic}
                         onChange={props.handleChange}> 
                     </input>
 
                     <label> Three Cheese </label>
                     <input name='three_cheese'
                         type='checkbox'
-                        value={props.form.three_cheese}
+                        checked={props.form.three_cheese}
+                        onChange={props.handleChange}> 
+                    </input>
+
+                    <label> Pineapple </label>
+                    <input name='pineapple'
+                        type='checkbox'
+                        checked={props.form.pineapple}
                         onChange={props.handleChange}> 
                     </input>
                 </div>
@@ -114,6 +121,7 @@ const PizzaForm = props => {
                        value={props.form.special}
                        onChange={props.handleChange}>
                 </input>
+                <button id='order-button'> Submit </button>
             </div>
         </form>
     );
