@@ -58,6 +58,10 @@ const App = () => {
 
   const submitHandler = event => {
     event.preventDefault();
+
+    if(errors.name.length >= 1) {
+      return;
+    }
     
     // new Pizza
     const newPizza = {
@@ -119,11 +123,11 @@ const App = () => {
       </Route>
 
       <Route path='/BYOP'> 
-        <PizzaForm form={pizza} submitHandler={submitHandler} handleChange={handleChange}> </PizzaForm>
+        <PizzaForm form={pizza} submitHandler={submitHandler} handleChange={handleChange} errors={errors}> </PizzaForm>
       </Route>
 
       <Route path='/submission'>
-
+        
       </Route>
     </Router>
   );

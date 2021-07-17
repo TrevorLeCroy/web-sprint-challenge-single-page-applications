@@ -14,6 +14,7 @@ const PizzaForm = props => {
                        value={props.form.name}
                        onChange={props.handleChange}>
                 </input>
+                <pre>{props.errors.name}</pre>
 
                 <label> Pizza Size </label>
                 <select 
