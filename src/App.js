@@ -119,15 +119,15 @@ const App = () => {
       </header>
 
       <Route exact path='/'>
-        <Link to='/BYOP' id='order-pizza'> Order Pizza </Link>
+        <Link to='/pizza' id='order-pizza'> Order Pizza </Link>
       </Route>
 
-      <Route path='/BYOP'> 
+      <Route path='/pizza'> 
         <PizzaForm form={pizza} submitHandler={submitHandler} handleChange={handleChange} errors={errors}> </PizzaForm>
       </Route>
 
       <Route path='/submission'>
-        
+
       </Route>
     </Router>
   );
